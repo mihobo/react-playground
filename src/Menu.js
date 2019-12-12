@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
-import { Icon, Menu } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Icon, Menu } from 'semantic-ui-react';
+import store from './redux/store';
+
 
 export default class MenuExampleLabeledIcons extends Component {
-  handleItemClick = (e, { name }) => {
-    const { onPageChange } = this.props;
-
-    onPageChange(name);
-    
-    // store.dispatch({type: 'SET_PAGE'})
+  handleItemClick = (e, { name }) => {  
+    store.dispatch({type: 'SET_PAGE', page: name });
   }
 
   render() {
