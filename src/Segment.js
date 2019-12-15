@@ -1,39 +1,110 @@
 import React from 'react'
-import {
-  Button,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Search,
-  Segment,
-} from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react'
 
-const SegmentExamplePlaceholderGrid = () => (
-  <Segment placeholder>
-    <Grid columns={2} stackable textAlign='center'>
-      <Divider vertical>Or</Divider>
+const friendOptions = [
+  {
+    key: 'Miho Tse',
+    text: 'Miho Tse',
+    value: 'Miho Tse',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Valter Cunha',
+    text: 'Valter Cunha',
+    value: 'Valter Cunha',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Drew Johnson',
+    text: 'Drew Johnson',
+    value: 'Drew Johnson',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Kye Bracey',
+    text: 'Kye Bracey',
+    value: 'Kye Bracey',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Ryan O\'Callagan',
+    text: 'Ryan O\'Callagan',
+    value: 'Ryan O\'Callagan',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Lizzy Tam',
+    text: 'Lizzy Tam',
+    value: 'Lizzy Tam',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Anna Muci',
+    text: 'Anna Muci',
+    value: 'Anna Muci',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Pete Meehan',
+    text: 'Pete Meehan',
+    value: 'Pete Meehan',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Alec Sammon',
+    text: 'Alec Sammon',
+    value: 'Alec Sammon',
+    image: { avatar: true, src: '/robert.png' },
+  },
+]
 
-      <Grid.Row verticalAlign='middle'>
-        <Grid.Column>
-          <Header icon>
-            <Icon name='search' />
-            Find Country
-          </Header>
+const suggestedFriendOptions = [
+  {
+    key: 'Claudia Thomas',
+    text: 'Claudia Thomas',
+    value: 'Claudia Thomas',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Paul Carter',
+    text: 'Paul Carter',
+    value: 'Paul Carter',
+    image: { avatar: true, src: '/robert.png' },
+  },
+  {
+    key: 'Dominic Johnston',
+    text: 'Dominic Johnston',
+    value: 'Dominic Johnston',
+    image: { avatar: true, src: '/robert.png' },
+  },
+]
 
-          <Search placeholder='Search countries...' />
-        </Grid.Column>
+const DropdownExampleSelection = () => (
+  <div>
+    <Dropdown
+      placeholder='Select Friend'
+      fluid
+      selection
+      options={friendOptions}
+    />
 
-        <Grid.Column>
-          <Header icon>
-            <Icon name='world' />
-            Add New Country
-          </Header>
-          <Button primary>Create</Button>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-  </Segment>
+    <br />
+
+    <Dropdown
+      text='Add user'
+      icon='add user'
+      floating
+      labeled
+      button
+      className='icon'
+    >
+      <Dropdown.Menu>
+        <Dropdown.Header content='People You Might Know' />
+        {suggestedFriendOptions.map((option) => (
+          <Dropdown.Item key={option.value} {...option} />
+        ))}
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
 )
-
-export default SegmentExamplePlaceholderGrid
+export default DropdownExampleSelection

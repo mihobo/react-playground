@@ -4,7 +4,7 @@ import store from './redux/store';
 
 
 export default class MenuExampleLabeledIcons extends Component {
-  handleItemClick = (e, { name }) => {  
+  handleItemClick = (e, { name }) => {
     store.dispatch({type: 'SET_PAGE', page: name });
   }
 
@@ -14,30 +14,30 @@ export default class MenuExampleLabeledIcons extends Component {
     return (
       <Menu icon='labeled'>
         <Menu.Item
-          name='gamepad'
-          active={activePage === 'gamepad'}
+          name='me'
+          active={activePage === 'me'}
           onClick={this.handleItemClick}
         >
-          <Icon name='gamepad' />
-          Games
+          <Icon name='user secret' />
+          About Me
         </Menu.Item>
 
         <Menu.Item
-          name='video camera'
-          active={activePage === 'video camera'}
+          name='news feed'
+          active={activePage === 'news feed'}
           onClick={this.handleItemClick}
         >
-          <Icon name='video camera' />
-          Channels
+          <Icon name='newspaper' />
+          News Feed
         </Menu.Item>
 
         <Menu.Item
-          name='video play'
-          active={activePage === 'video play'}
+          name='friends'
+          active={activePage === 'friends'}
           onClick={this.handleItemClick}
         >
-          <Icon name='video play' />
-          Videos
+          <Icon name='beer' />
+          Friends
         </Menu.Item>
       </Menu>
     )
