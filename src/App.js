@@ -6,7 +6,7 @@ import Feed from './Feed';
 import Segment from './Segment';
 import Menu from './Menu';
 import store from './redux/store';
-
+import Background from './Background';
 
 export default class App extends React.Component {
   render() {
@@ -14,14 +14,18 @@ export default class App extends React.Component {
     const page = allRedux.page;
 
     return (
-      <div className="App">
-        <Container text color textAlign="center">
-          <Menu activePage={page} />
-          {page === 'me' && <ProfilePicture />}
-          {page === 'news feed' && <Feed />}
-          {page === 'friends' && <Segment />}
-        </Container>
+      <div>
+        <div className="App">
+          <Container text color textAlign="center">
+            <Menu activePage={page} />
+            {page === 'me' && <ProfilePicture />}
+            {page === 'news feed' && <Feed />}
+            {page === 'friends' && <Segment />}
+          </Container>
+        </div>
+        <Background />
       </div>
+
     );
   }
 }

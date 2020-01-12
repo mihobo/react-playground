@@ -30,7 +30,7 @@ const CardExampleCard = () => (
             </a>
           </Card.Content>
         </Card>
-    <Segment inverted color = 'blue'>
+    <Segment inverted color = 'bluemk'>
       <p>
           Hi. My name is Robert and I am an elite hacker for RobertCorp. I have luscious long locks and a dazzling smile to charm off enemies in a pinch. I like to play ping pong on the weekend and walk on sandy beaches on a hot summer's day and feel the cool wind in my hair. Contact me for more information about...shh!
       </p>
